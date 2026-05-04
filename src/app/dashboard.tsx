@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from '@/components/button';
+<<<<<<< HEAD
 import { List } from '@/components/list';
 
 import { useAuth } from '@/context/AuthContext';
@@ -32,6 +33,16 @@ export default function Dashboard() {
                 )}
             />
 
+=======
+
+export default function Dashboard() {
+     const { username } = useLocalSearchParams<{ username: string }>();
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>Bem-vindo, {username}!</Text>
+            <Button title="Voltar" onPress={() => router.back()} />
+>>>>>>> be84baeb24e8a5b0157aeb29293aabb0ccb6e0ca
         </View>
     )
 }
@@ -47,6 +58,7 @@ export const styles = StyleSheet.create({
         color: '#333',
         fontSize: 18,
         fontWeight: 'bold',
+<<<<<<< HEAD
     },
     cardTitle: {
         fontSize: 16,
@@ -59,3 +71,9 @@ export const styles = StyleSheet.create({
         marginTop: 4,
     }
 });
+=======
+        textAlign: 'center',
+        margin: '200px',
+    },      
+});
+>>>>>>> be84baeb24e8a5b0157aeb29293aabb0ccb6e0ca
